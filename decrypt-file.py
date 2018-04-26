@@ -7,7 +7,7 @@ from Crypto.PublicKey import RSA
 
 key_file = sys.argv[1]
 input_file = sys.argv[2]
-output_file = input_file.split(".enc")[0]
+output_file = input_file + ".clear"
 
 with open(key_file, "r") as f:
     key = RSA.importKey(f.read())
